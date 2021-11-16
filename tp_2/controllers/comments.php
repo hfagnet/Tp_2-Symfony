@@ -11,6 +11,7 @@ require_once('models/posts.php');
 
 function getCommentsOfPostController($postId)
 {
+    $post = getinfopost($postId);
     $comments = getComment($postId);
     require('views/comments.php');
 }

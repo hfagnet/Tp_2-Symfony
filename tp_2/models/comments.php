@@ -9,6 +9,15 @@ require_once('database.php');
  */
 
 
+function getinfopost($postId)
+{
+        $db = initDatabse();
+        $table = $db->prepare('SELECT * FROM posts  WHERE id =' .$postId);
+        $table->execute();
+        $table_bdd = $table->fetchall();
+        return $table_bdd;
+}
+
 function getComment($postId)
 {
         $db = initDatabse();

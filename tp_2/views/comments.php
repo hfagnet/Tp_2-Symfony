@@ -12,9 +12,11 @@
 
 <body style="width: 1000px;">
 
-    <h1>Mon poste <?php echo $id ?></h1><br>
+<?php $post = array_shift($post); ?>
+    <h1>Mon poste <?php echo $post['id'] ?></h1><br>
     <p>Voici la desciption : </p>
-    <p><?php echo $comments[1]['description'] ?></p>
+    <p><?php echo $post['description'] ?></p>
+
     <table class="table table-striped">
         <thead>
             <tr>
